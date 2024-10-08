@@ -2,6 +2,8 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { JSX, SVGProps } from "react"
+import Image from "next/image"
+import img from "@/images/image.png"
 
 export function Navbar() {
     return (
@@ -34,7 +36,10 @@ export function Navbar() {
                 </SheetContent>
             </Sheet>
             <Link href="/" className="mr-6 hidden lg:flex text-2xl text-white" prefetch={false}>
-                SubadhaAI
+                <Image src={img} alt="" className="w-[8vw] h-[8vh]"/> 
+                <p className="flex justify-center items-center">
+                    SubadhaAI
+                </p>
             </Link>
             <nav className="ml-auto hidden lg:flex gap-6">
                 <Link

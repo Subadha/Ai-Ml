@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import Link from 'next/link';
 
 export default function Home() {
     const textRef = useRef<HTMLDivElement>(null);
@@ -34,12 +35,22 @@ export default function Home() {
                 <p className="text-xl leading-relaxed max-w-xl mx-auto md:text-xl sm:text-sm">
                     Over 25 years of expertise in developing AI, Generative AI, and Intelligent Mobility Solutions for global industries.
                 </p>
-                <button
-                    className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                    aria-label="Explore Our Services"
-                >
-                    Explore Our Services
-                </button>
+                <div className="flex flex-col md:flex-row md:gap-10 md:justify-center md:items-center">
+                    <Link href="/services">
+                        <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 mb-4 md:mb-0 md:mr-4"
+                            aria-label="Explore Our Services">
+                            Explore Our Services
+                        </button>
+                    </Link>
+                    <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ29kzqxxw-Hydb2sSIvA7OOfBHr_QLI7Nssa6k0JdMx6Za8dFuKKuLb68B60h94nzM4H-qPOB0U">
+                        <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                            Book a Call
+                        </button>
+                    </Link>
+                </div>
+
+                
+                
             </div>
 
             {/* Scrolling Text */}
