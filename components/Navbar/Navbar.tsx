@@ -14,28 +14,27 @@ export function Navbar() {
                     </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="bg-black dark:bg-gray-850">
-                    <Link href="#" className="mr-6 hidden lg:flex" prefetch={false}>
-                        <MountainIcon className="h-6 w-6 text-white" />
+                    <Link href="#" className="mr-6 hidden lg:flex " prefetch={false}>
                         <span className="sr-only">Acme Inc</span>
                     </Link>
                     <div className="grid gap-2 py-6 text-white">
-                        <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+                        <Link href="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             Home
                         </Link>
-                        <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+                        <Link href="/about" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             About
                         </Link>
-                        <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+                        <Link href="#project" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             Services
                         </Link>
-                        <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+                        <Link href="#contact" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             Contact
                         </Link>
                     </div>
                 </SheetContent>
             </Sheet>
             <Link href="/" className="mr-6 hidden lg:flex text-2xl text-white" prefetch={false}>
-                Turing
+                SubadhaAI
             </Link>
             <nav className="ml-auto hidden lg:flex gap-6">
                 <Link
@@ -92,21 +91,3 @@ function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
     )
 }
 
-function MountainIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-        </svg>
-    )
-}

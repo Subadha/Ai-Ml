@@ -1,4 +1,8 @@
-"use client"; // If using Next.js
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+
+ // If using Next.js
 
 const Footer = () => {
     return (
@@ -51,16 +55,13 @@ const Footer = () => {
                     </div>
 
                     <div className="flex gap-4 hover:cursor-pointer">
-                        <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" width="30" height="30" alt="Facebook" />
-                        <img src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg" width="30" height="30" alt="Twitter" />
-                        <img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" width="30" height="30" alt="Instagram" />
-                        <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" width="30" height="30" alt="GitHub" />
-                        <img src="https://www.svgrepo.com/show/22037/path.svg" width="30" height="30" alt="Path" />
-                        <img src="https://www.svgrepo.com/show/28145/linkedin.svg" width="30" height="30" alt="LinkedIn" />
-                        <img src="https://www.svgrepo.com/show/22048/dribbble.svg" width="30" height="30" alt="Dribbble" />
+                        <Link href="https://www.facebook.com/profile.php?id=61561972772982&mibextid=ZbWKwL"><Image src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg" width="30" height="30" alt="Facebook" /></Link>
+                        <Link href="https://x.com/Subadhadev?t=f-3E602Dxd7GwA0lIw7GaQ&s=08"><Image src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg" width="30" height="30" alt="Twitter" /></Link> 
+                        <Link href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fsubadha.co.in%2F&is_from_rle"><Image src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" width="30" height="30" alt="Instagram" /></Link>
+                        <Link href="https://www.linkedin.com/company/subadha/people/"><Image src="https://www.svgrepo.com/show/28145/linkedin.svg" width="30" height="30" alt="LinkedIn" /></Link> 
                     </div>
                 </div>
-                <p className="p-8 text-start md:text-center md:text-lg md:p-4">© 2023 Your Company Inc. All rights reserved.</p>
+                <p className="p-8 text-start md:text-center md:text-lg md:p-4">© 2024 SubadhaAI Inc. All rights reserved.</p>
             </div>
         </footer>
     );
