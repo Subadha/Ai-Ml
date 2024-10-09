@@ -7,7 +7,7 @@ import img from "@/images/image.png"
 
 export function Navbar() {
     return (
-        <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-black dark:bg-gray-850">
+        <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6 bg-black dark:bg-gray-850 sticky top-0 z-50">
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="outline" size="icon" className="lg:hidden text-white">
@@ -16,20 +16,23 @@ export function Navbar() {
                     </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="bg-black dark:bg-gray-850">
-                    <Link href="#" className="mr-6 hidden lg:flex " prefetch={false}>
-                        <span className="sr-only">Acme Inc</span>
-                    </Link>
                     <div className="grid gap-2 py-6 text-white">
+                        <Link href="/" className="flex w-full items-center text-lg font-semibold" prefetch={false}>
+                            <Image src={img} alt="" className="w-[8vw] h-[8vh]" />
+                            <p className="flex text-white">
+                                SubadhaAI
+                            </p>
+                        </Link>
                         <Link href="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             Home
                         </Link>
                         <Link href="/about" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             About
                         </Link>
-                        <Link href="#project" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+                        <Link href="/#project" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             Services
                         </Link>
-                        <Link href="#contact" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+                        <Link href="/#contact" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             Contact
                         </Link>
                     </div>
@@ -41,7 +44,7 @@ export function Navbar() {
                     SubadhaAI
                 </p>
             </Link>
-            <nav className="ml-auto hidden lg:flex gap-6">
+            <nav className="ml-auto  hidden lg:flex gap-6">
                 <Link
                     href="/"
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-black px-4 py-2 text-xl font-medium text-white transition-colors hover:bg-gray-700 hover:text-gray-200 focus:bg-gray-700 focus:text-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-850 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
@@ -57,14 +60,14 @@ export function Navbar() {
                     About
                 </Link>
                 <Link
-                    href="#project"
+                    href="/#project"
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-black px-4 py-2 text-xl font-medium text-white transition-colors hover:bg-gray-700 hover:text-gray-200 focus:bg-gray-700 focus:text-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-850 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
                     prefetch={false}
                 >
                     Services
                 </Link>
                 <Link
-                    href="#contact"
+                    href="/#contact"
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-black px-4 py-2 text-xl font-medium text-white transition-colors hover:bg-gray-700 hover:text-gray-200 focus:bg-gray-700 focus:text-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-850 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
                     prefetch={false}
                 >
