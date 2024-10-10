@@ -1,6 +1,6 @@
 export default function Home2() {
     return (
-        <div className="flex flex-col h-full p-8 md:p-12 lg:p-[200px] bg-black text-white gap-[100px]">
+        <div id="section1" className="flex flex-col h-full p-8 md:p-12 lg:p-[200px] bg-black text-white gap-[100px]">
             <div className="flex flex-col bg-opacity-90 rounded-lg shadow-xl p-6 md:p-8 lg:p-12 border-l-4 border-purple-500 hover:scale-105 transition-transform duration-300">
                 <div className="flex h-full text-lg md:text-xl lg:text-2xl text-center px-4 md:px-8 lg:px-12">
                     At Our Company, we specialize in cutting-edge AI and machine learning development, providing innovative solutions that transform industries such as automotive, technology, and smart mobility.

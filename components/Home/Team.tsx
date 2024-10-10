@@ -6,7 +6,7 @@ import img2 from "@/images/team2.png"
 import img3 from "@/images/team3.png"
 import img4 from "@/images/m2.jpeg"
 import img5 from "@/images/team5.png"
-import img6 from "@/images/image2.png"
+import img7 from "@/images/team7.png"
 
 const teamMembers = [
     {
@@ -20,9 +20,9 @@ const teamMembers = [
     {
         id: 2,
         name: "Tarun Jain",
-        role: "CTO",
+        role: "COO",
         description: "Overseeing technological development and strategy.",
-        photo: img6,
+        photo: img7,
         linkedin: "https://www.linkedin.com/in/tarun-jain-47a0844?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     {
@@ -36,7 +36,7 @@ const teamMembers = [
     {
         id: 4,
         name: "Vivek Agarwal",
-        role: "UX Designer",
+        role: "ML Engineer",
         description: "Creating user-friendly designs and improving user experience.",
         photo: img3,
         linkedin: "https://www.linkedin.com/in/vivek-agarwal-bb6300198/"
@@ -52,7 +52,7 @@ const teamMembers = [
     {
         id: 6,
         name: "Shivarama Krishna",
-        role: "Marketing Specialist",
+        role: "AI Consultant",
         description: "Driving marketing strategies and campaigns.",
         photo: img5,
         linkedin: "https://www.linkedin.com/in/shivram1896?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
