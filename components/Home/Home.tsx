@@ -37,13 +37,14 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col md:flex-row md:gap-10 md:justify-center md:items-center">
                     <Link href="/services">
-                        <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 mb-4 md:mb-0 md:mr-4"
+                        <button className="w-[70vw] sm:w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 mb-4 md:mb-0 md:mr-4"
                             aria-label="Explore Our Services">
                             Explore Our Services
                         </button>
                     </Link>
                     <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ29kzqxxw-Hydb2sSIvA7OOfBHr_QLI7Nssa6k0JdMx6Za8dFuKKuLb68B60h94nzM4H-qPOB0U">
-                        <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                        <button className="w-[70vw] sm:w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 mb-4 md:mb-0 md:mr-4"
+                            aria-label="Explore Our Services">
                             Book a Call
                         </button>
                     </Link>
