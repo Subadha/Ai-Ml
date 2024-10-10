@@ -20,7 +20,7 @@ const teamMembers = [
     {
         id: 2,
         name: "Tarun Jain",
-        role: "COO , IITH Alumni",
+        role: "COO",
         photo: img7,
         linkedin: "https://www.linkedin.com/in/tarun-jain-47a0844?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
