@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { JSX, SVGProps } from "react"
 import Image from "next/image"
-import img from "@/images/image.png"
+import img from "@/images/logo.png"
 
 export function Navbar() {
     return (

@@ -30,8 +30,8 @@ const Footer = () => {
                     <div>
                         <p className="font-semibold">Quick Links</p>
                         <div className="flex flex-col items-start mt-5 space-y-2">
-                            <p className="transition-colors duration-300 hover:underline hover:cursor-pointer hover:text-blue-500">Home</p>
-                            <p className="transition-colors duration-300 hover:underline hover:cursor-pointer hover:text-blue-500">Who We Are</p>
+                            <Link href="/#"> <p className="transition-colors duration-300 hover:underline hover:cursor-pointer hover:text-blue-500">Home</p></Link>
+                            <Link href="/#team"><p className="transition-colors duration-300 hover:underline hover:cursor-pointer hover:text-blue-500">Who We Are</p></Link>
                             <p className="transition-colors duration-300 hover:underline hover:cursor-pointer hover:text-blue-500">Our Philosophy</p>
                         </div>
                     </div>
@@ -50,8 +50,8 @@ const Footer = () => {
 
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <div className="flex flex-1 gap-4 hover:cursor-pointer">
-                        <img src="https://www.svgrepo.com/show/303139/google-play-badge-logo.svg" width="130" height="110" alt="Google Play" />
-                        <img src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg" width="130" height="110" alt="App Store" />
+                        {/* <img src="https://www.svgrepo.com/show/303139/google-play-badge-logo.svg" width="130" height="110" alt="Google Play" />
+                        <img src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg" width="130" height="110" alt="App Store" /> */}
                     </div>
 
                     <div className="flex gap-4 hover:cursor-pointer">
@@ -59,6 +59,8 @@ const Footer = () => {
                         <Link href="https://x.com/Subadhadev?t=f-3E602Dxd7GwA0lIw7GaQ&s=08"><Image src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg" width="30" height="30" alt="Twitter" /></Link> 
                         <Link href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fsubadha.co.in%2F&is_from_rle"><Image src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" width="30" height="30" alt="Instagram" /></Link>
                         <Link href="https://www.linkedin.com/company/subadha/people/"><Image src="https://www.svgrepo.com/show/28145/linkedin.svg" width="30" height="30" alt="LinkedIn" /></Link> 
+                        <Link href="https://chat.whatsapp.com/FXHOHpnMQmAJGMjC8ICo9J" ><Image src="https://www.svgrepo.com/show/475692/whatsapp-color.svg" width="30" height="30" alt=""/></Link>
+                        <Link href="https://t.me/SubadhaAura" ><Image src="https://www.svgrepo.com/show/452115/telegram.svg" alt="" width="30" height="30" /></Link>
                     </div>
                 </div>
                 <p className="p-8 text-start md:text-center md:text-lg md:p-4">© 2024 SubadhaAI Inc. All rights reserved.</p>
