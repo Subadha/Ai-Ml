@@ -33,9 +33,9 @@ const companies: Company[] = [
 
 export default function CompaniesWorkedWith() {
     return (
-        <div className="flex flex-col items-center text-center p-8 md:px-[150px] bg-black text-white overflow-hidden"> {/* Prevent overflow */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl text-gradient mb-6">Companies We ve Worked With</h2>
-            <div className="flex flex-col gap-6">
+        <div className="flex flex-col items-center text-center p-8 gap-10 md:px-[150px] bg-black text-white overflow-hidden"> {/* Prevent overflow */}
+            <h2 className="text-4xl md:text-5xl  lg:text-6xl text-gradient mb-6">Companies We ve Worked With</h2>
+            <div className="flex flex-col sm:gap-[100px] gap-6">
                 {companies.map((company, index) => (
                     <div
                         key={index}
