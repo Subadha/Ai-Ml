@@ -25,7 +25,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="relative flex flex-col h-screen justify-center items-center bg-black px-4 overflow-hidden">   
+        <div className="relative flex flex-col h-[100vh]  justify-center items-center bg-black px-4 overflow-hidden">   
             <div className="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] md:w-[500px] md:h-[500px] sm:w-[400px] sm:h-[400px] bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-700 opacity-50 blur-3xl rounded-full pointer-events-none"></div>
             <div className="absolute bottom-[-200px] right-[-200px] w-[600px] h-[600px] md:w-[500px] md:h-[500px] sm:w-[400px] sm:h-[400px] bg-gradient-to-tl from-pink-500 to-red-600 opacity-50 blur-3xl rounded-full pointer-events-none"></div>
             <div className="relative max-w-6xl text-center space-y-10 z-10 text-white">

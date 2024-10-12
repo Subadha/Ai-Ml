@@ -1,42 +1,63 @@
 // components/Services.tsx
 
 "use client";
+import img1 from "@/images/project1.png";
+import img2 from "@/images/project2.png";
+import img3 from "@/images/project3.png";
+import img4 from "@/images/project4.png";
+import img5 from "@/images/project5.png";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image, { StaticImageData } from 'next/image';
 
-// Define the structure of a service
 interface Service {
     id: number;
     title: string;
     description: string[];
-    icon: JSX.Element; // You can replace this with a string if using image URLs
+    image: StaticImageData;
 }
 
-// ServiceCard Component
 const ServiceCard: React.FC<{ service: Service }> = ({ service }) => {
+    const isEven = service.id % 2 === 0;
+
     return (
         <motion.div
-            className="flex flex-col justify-between py-8 px-6 mb-12 bg-transparent shadow-md rounded-lg transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl"
+            className={`flex flex-col ${isEven ? 'md:flex-row-reverse' : 'md:flex-row'} py-8 px-6 sm:gap-10 gap-4 mb-12 bg-transparent shadow-lg rounded-lg transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:scale-105 hover:bg-opacity-90`}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: service.id * 0.1 }}
         >
-            <div className="inline-block text-purple-500 mb-4">
-                {/* Replace the SVG below with your preferred icon or image */}
-                {service.icon}
+            {/* Image section */}
+            <div className="relative w-full md:w-1/2 mb-4 md:mb-0">
+                <div className="overflow-hidden rounded-lg">
+                    <Image
+                        src={service.image}
+                        alt={service.title}
+                        width={500}
+                        height={300}
+                        className="object-cover h-72 w-full transform transition duration-500 ease-in-out hover:scale-110"
+                    />
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 rounded-lg"></div>
+                </div>
             </div>
-            <h3 className="text-xl leading-normal mb-2 font-semibold text-white">{service.title}</h3>
-            <ul className="text-gray-400 list-disc list-inside space-y-2 flex-grow">
-                {service.description.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
-            </ul>
+
+            {/* Text section */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center ">
+                <h3 className="text-2xl leading-normal mb-4 font-semibold text-white text-center md:text-left tracking-wide transform transition hover:text-purple-400">
+                    {service.title}
+                </h3>
+                <ul className="text-gray-400 list-disc list-inside space-y-2 text-center md:text-left">
+                    {service.description.map((item, index) => (
+                        <li key={index} className="transform transition hover:scale-105">{item}</li>
+                    ))}
+                </ul>
+            </div>
         </motion.div>
     );
 };
 
-// Main Services Component
 const Services: React.FC = () => {
     const services: Service[] = [
         {
@@ -47,13 +68,7 @@ const Services: React.FC = () => {
                 "Generative AI Solutions: Create AI products such as chatbots, content generation platforms, or tools that enhance productivity.",
                 "AI for Autonomous Vehicles: Design AI-driven mobility solutions, including autonomous car systems, vehicle health monitoring, and intelligent traffic regulation.",
             ],
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" className="bi bi-robot" viewBox="0 0 16 16">
-                    {/* Example robot icon */}
-                    <path d="M12 1a1 1 0 0 1 1 1v1h-14v-1a1 1 0 0 1 1-1h12zm1 3h-14v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                    <path d="M5 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm6 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                </svg>
-            ),
+            image: img1,
         },
         {
             id: 2,
@@ -63,12 +78,7 @@ const Services: React.FC = () => {
                 "IoT Solutions: Build smart city, intelligent traffic systems, and IoT-enabled devices, integrating sensors and data collection for automation and intelligent decision-making.",
                 "Connected Mobility Solutions: Develop intelligent connected mobility platforms that integrate public and private transportation with real-time analytics.",
             ],
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" className="bi bi-signal" viewBox="0 0 16 16">
-                    {/* Example signal icon */}
-                    <path d="M0 0v16h16V0H0zM2 14V2h12v12H2z" />
-                </svg>
-            ),
+            image: img2,
         },
         {
             id: 3,
@@ -77,12 +87,7 @@ const Services: React.FC = () => {
                 "SaaS Platforms: Create scalable SaaS products for industries that need cloud-based platforms, combining AI and SaaS for automation, communication, and operational efficiency.",
                 "Cloud Infrastructure Consulting: Assist organizations in building and scaling cloud infrastructure and integrating AI-enabled products for global operations.",
             ],
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" className="bi bi-cloud" viewBox="0 0 16 16">
-                    {/* Example cloud icon */}
-                    <path d="M4.406 11.342a5.53 5.53 0 0 1 .394-1.66A4.5 4.5 0 1 1 10.5 8a4.52 4.52 0 0 1 3.621 2.17A4.502 4.502 0 0 1 10.5 14a4.5 4.5 0 0 1-4.094-2.658z" />
-                </svg>
-            ),
+            image: img3,
         },
         {
             id: 4,
@@ -91,13 +96,7 @@ const Services: React.FC = () => {
                 "Conversational AI Solutions: Develop and implement solutions such as voice biometrics, speech recognition, and virtual assistants for industries like customer service, automotive, and education.",
                 "Voice Biometrics for Security: Provide AI-enabled biometric authentication solutions for industries requiring high security (e.g., finance, healthcare).",
             ],
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" className="bi bi-chat-left-text" viewBox="0 0 16 16">
-                    {/* Example chat icon */}
-                    <path d="M14 1H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4v3l3-3h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
-                    <path d="M3 3h10v2H3V3zm0 4h10v2H3V7zm0 4h6v2H3v-2z" />
-                </svg>
-            ),
+            image: img4,
         },
         {
             id: 5,
@@ -106,64 +105,13 @@ const Services: React.FC = () => {
                 "Smart City Solutions: Offer intelligent mobility solutions for urban areas, including AI for traffic monitoring, vehicle health prediction, and integrating transportation systems.",
                 "Location Intelligence and Fleet Management: Build AI-driven fleet management platforms and systems for optimizing logistics, transportation, and vehicle safety.",
             ],
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" className="bi bi-geo-alt" viewBox="0 0 16 16">
-                    {/* Example geo icon */}
-                    <path d="M12.166 8.94a5.507 5.507 0 1 1-5.507-5.507 5.507 5.507 0 0 1 5.507 5.507zm-5.507-4.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
-                    <path d="M12.166 8.94a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z" />
-                </svg>
-            ),
-        },
-        {
-            id: 6,
-            title: "AI-Powered Enterprise Solutions",
-            description: [
-                "AI for Business Automation: Implement AI solutions for improving internal operations, such as meeting room automation, virtual collaboration tools, and employee productivity enhancements.",
-                "Digital Transformation Consulting: Guide businesses through digital transformations, integrating AI across various sectors like retail, manufacturing, and logistics.",
-            ],
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" className="bi bi-gear" viewBox="0 0 16 16">
-                    {/* Example gear icon */}
-                    <path d="M9.405 1.05a1 1 0 0 0-1.81 0l-.14.437a.5.5 0 0 1-.492.39H5.5a1 1 0 0 0-.866.5L3.607 3.5a1 1 0 0 0 .192 1.41l1.103 1.103a.5.5 0 0 1 .146.528l-.43.93a1 1 0 0 0 .236 1.06l.79.79a1 1 0 0 0 1.414 0l.79-.79a1 1 0 0 0 .236-1.06l-.43-.93a.5.5 0 0 1 .146-.528l1.103-1.103a1 1 0 0 0 .192-1.41l-1.04-1.04a.5.5 0 0 1-.492-.39l-.14-.437zM8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                </svg>
-            ),
-        },
-        {
-            id: 7,
-            title: "Product Management and Innovation Consulting",
-            description: [
-                "Innovation Strategy Consulting: Help companies align their business and technology strategies by identifying gaps and developing innovative AI-driven solutions.",
-                "R&D Consulting: Offer services in leading R&D centers for product ideation and prototyping.",
-            ],
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" className="bi bi-lightbulb" viewBox="0 0 16 16">
-                    {/* Example lightbulb icon */}
-                    <path d="M2 6a6 6 0 1 1 12 0c0 2.21-.896 4.206-2.344 5.656A6.97 6.97 0 0 1 8 15a6.97 6.97 0 0 1-1.656-1.344C2.896 10.206 2 8.21 2 6z" />
-                    <path d="M6.5 11.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm3 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z" />
-                </svg>
-            ),
-        },
-        {
-            id: 8,
-            title: "Cross-Functional Leadership and Consulting",
-            description: [
-                "Global Leadership Consulting: Leverage your experience in global R&D to offer leadership consulting to help companies scale teams across different regions.",
-                "Program Management for AI Initiatives: Assist companies in running AI-driven projects, including budgeting, vendor management, and strategy execution.",
-            ],
-            icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" className="bi bi-person-lines-fill" viewBox="0 0 16 16">
-                    {/* Example person icon */}
-                    <path d="M12 1a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
-                    <path d="M14 14s-1-1.5-6-1.5S2 14 2 14v1h12v-1z" />
-                </svg>
-            ),
+            image: img5,
         },
     ];
 
     return (
         <section id="services" className="relative py-20 bg-black">
             <div className="container mx-auto px-4">
-                {/* Heading */}
                 <header className="text-center mx-auto mb-12 lg:px-20">
                     <h2 className="text-3xl leading-normal mb-2 font-bold text-white">What We Do</h2>
                     <svg
@@ -173,7 +121,7 @@ const Services: React.FC = () => {
                         x="0px"
                         y="0px"
                         viewBox="0 0 100 60"
-                        className="mx-auto my-4"
+                        className="mx-auto my-4 animate-pulse"
                         style={{ height: '35px' }}
                         xmlSpace="preserve"
                     >
@@ -202,18 +150,15 @@ const Services: React.FC = () => {
                         ></line>
                     </svg>
                 </header>
-                {/* Services Grid */}
-                <div className="flex flex-wrap -mx-4">
+                <div className="flex flex-col space-y-12">
                     {services.map((service) => (
-                        <div key={service.id} className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8 flex">
-                            <ServiceCard service={service} />
-                        </div>
+                        <ServiceCard key={service.id} service={service} />
                     ))}
                 </div>
-                
             </div>
         </section>
     );
 };
 
 export default Services;
+
