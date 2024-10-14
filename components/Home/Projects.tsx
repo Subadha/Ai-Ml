@@ -49,7 +49,7 @@ export function Projects() {
                                     <CardContent className="p-6 text-center flex flex-col justify-between h-full">
                                         <div className="flex-grow min-h-[100px]">
                                             <h3 className="text-2xl font-bold text-white mb-2 text-shadow">{project.title}</h3>
-                                            <p className="text-gray-300 text-sm mb-4">{project.description}</p>
+                                            <p className="text-gray-300 text-sm mb-4">{project.briefDescription}</p>
                                         </div>
                                         <button
                                             className="bg-blue-600 text-white font-semibold py-2 px-4 rounded transition duration-300 hover:bg-blue-500 mt-4"
