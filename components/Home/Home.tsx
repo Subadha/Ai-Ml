@@ -36,7 +36,7 @@ export default function Home() {
                     Over 25 years of expertise in developing AI, Generative AI, and Intelligent Mobility Solutions for global industries.
                 </p>
                 <div className="flex flex-col md:flex-row md:gap-10 md:justify-center md:items-center">
-                    <Link href="/services">
+                    <Link href="/">
                         <button className="w-[70vw] sm:w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold px-8 py-4 rounded-full shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 mb-4 md:mb-0 md:mr-4"
                             aria-label="Explore Our Services">
                             Explore Our Services
@@ -54,19 +54,19 @@ export default function Home() {
                 
             </div>
 
-            {/* Scrolling Text */}
-            <div className="absolute bottom-0 left-0 w-full text-white overflow-hidden">
+          
+            {/* <div className="absolute bottom-0 left-0 w-full text-white overflow-hidden">
                 <div
                     ref={textRef}
                     className="flex whitespace-nowrap items-center"
                 >
-                    {/* Scrolling items */}
+ 
                     {['Gemini', 'ChatGPT', 'Nvidia', 'Snowflake'].flatMap((text, index) => (
                         <p key={index} className="text-2xl sm:text-3xl md:text-4xl inline-block font-bold drop-shadow-lg mx-6">
                             {text}
                         </p>
                     ))}
-                    {/* Duplicate the text items for seamless effect */}
+ 
                     {['Gemini', 'ChatGPT', 'Nvidia', 'Snowflake'].flatMap((text, index) => (
                         <p key={index + 4} className="text-2xl sm:text-3xl md:text-4xl inline-block font-bold drop-shadow-lg mx-6">
                             {text}
@@ -78,7 +78,7 @@ export default function Home() {
                         </p>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
