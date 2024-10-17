@@ -26,7 +26,7 @@ export function Navbar() {
                         <Link href="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             Home
                         </Link>
-                        <Link href="/about" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+                        <Link href="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                             About
                         </Link>
                         <Link href="/#project" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
@@ -56,7 +56,7 @@ export function Navbar() {
                     Home
                 </Link>
                 <Link
-                    href="/about"
+                    href="/"
                     className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-black px-4 py-2 text-xl font-medium text-white transition-colors hover:bg-gray-700 hover:text-gray-200 focus:bg-gray-700 focus:text-gray-200 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-850 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
                     prefetch={false}
                 >
