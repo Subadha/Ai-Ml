@@ -52,7 +52,7 @@ const Footer = () => {
                             <Link href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fsubadha.co.in%2F&is_from_rle" passHref>
                                 <Image src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" width={30} height={30} alt="Instagram" />
                             </Link>
-                            <Link href="https://www.linkedin.com/company/subadha/people/" passHref>
+                            <Link href="https://www.linkedin.com/showcase/subadhaaura-ai-innovations/" passHref>
                                 <Image src="https://www.svgrepo.com/show/28145/linkedin.svg" width={30} height={30} alt="LinkedIn" />
                             </Link>
                             <Link href="https://wa.me/917382308795" passHref>
